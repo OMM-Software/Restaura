@@ -19,15 +19,16 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 100%;
-    background-color: #f1f1f1;
+    .row.content {height: 800px;
+   /*  background-color: #f1f1f1; */
+    background-image: url(images/fadeBackground.png)
     }
     
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 110px;
       background-color: #5c5a5a;
-      height: 100%;
+      /* height: 100%; */
      
     }
     
@@ -43,6 +44,8 @@
       .sidenav {
         height: auto;
         padding: 15px;
+        float: inherit;
+        
       }
       .row.content {height:auto;} 
     }
@@ -81,15 +84,15 @@
 
   
 <div class="container-fluid text-center">    
-  <div class="row content">
+  <div class="row ">
     <!-- <div class="col-sm-2 sidenav">
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
     </div> -->
-    <div class="row">
-    <div class="col-sm-8 text-left "> 
-    <img src="images/fadeBackground.png">
+    <div class="row content">
+    
+    <!-- <img src="images/fadeBackground.png" style="width:100%"> -->
   
  <!--   <div id="myCarousel" class="carousel slide" data-ride="carousel">-->
     <!-- Indicators -->
@@ -129,8 +132,8 @@
       <span class="sr-only">Next</span>
     </a>
     </div>-->
-  </div>
-        <div class="col-md-3  sidenav">
+  
+        <div class="col-md-4  sidenav col-md-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
 			    		<h3 class="panel-title">Register With Us</h3>
