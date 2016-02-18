@@ -19,7 +19,7 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 800px;
+    .row.content {height: 600px;
    /*  background-color: #f1f1f1; */
     background-image: url(images/fadeBackground.png)
     }
@@ -43,7 +43,7 @@
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
-        padding: 15px;
+        padding-top: 110px;
         float: inherit;
         
       }
@@ -62,7 +62,72 @@
       margin: auto;
       padding-top: 90px;
   }
+  /*ICON EFFECTS*/
+ .white {
+    color: white;
+}
 
+.btn-lg {
+    font-size: 38px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+
+.box > .icon {
+    text-align: center;
+    position: relative;
+}
+
+.box > .icon > .image {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border: 7px solid white;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #63B76C;
+    vertical-align: middle;
+}
+
+.box > .icon:hover > .image {
+    border: 4px solid black;
+}
+
+.box > .icon > .image > i {
+    font-size: 40px !important;
+    color: #fff !important;
+}
+
+.box > .icon:hover > .image > i {
+    color: white !important;
+}
+
+
+   
+
+.box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a {
+    color: #222;
+}
+
+.box > .icon > .info > .more a {
+    color: #222;
+    line-height: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.box > .icon:hover > .info > .more > a {
+    color: #000;
+    padding: 6px 8px;
+    border-bottom: 4px solid black;
+}
+
+.box .space {
+    height: 30px;
+}
+</style>  
   </style>
 </head>
 <body >
@@ -178,11 +243,55 @@
       <div class="col-md-8 text-left col-md-offset-1">
        <h1>Features</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-       <hr>
+       </div>
+       </div>
+        <div class="container">
+            <div class="row">
+                 <div class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="box">
+                      <div class="icon">
+                        <div class="image"><span class="glyphicon glyphicon-list-alt btn-sm-6 white"></span></div>
+                          <div class="info">
+                           <p>
+                           ustomize your Point of Sale to your exact business needs and wants
+                          </p>
+                         </div> 
+                      </div>
+                 <div class="space"></div>
+                   </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                   <div class="box">
+                      <div class="icon">
+                         <div class="image"><span class="glyphicon glyphicon-envelope btn-sm-6 white"></span></div>
+                           <div class="info">
+                            <p>
+                            Customize your Point of Sale to your exact business needs and wants
+                           </p>
+                          </div> 
+                      </div>
+                     <div class="space"></div>
+                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-lg-4">
+                <div class="box">
+                  <div class="icon">
+                     <div class="image"><span class="glyphicon glyphicon-volume-up btn-sm-6 white"></span></div>
+                       <div class="info">
+                        <p>
+                        Customize your Point of Sale to your exact business needs and wants
+                       </p>
+                      </div> 
+                  </div>
+                <div class="space"></div>
+               </div>
+              </div>
+    </div>
+</div>
        <!-- <h3>Test</h3>
        <p>Lorem ipsum...</p> -->
-      </div>
-    </div>
+      
+  
     <!-- <div class="col-sm-2 sidenav">
       <div class="well">
         <p>ADS</p>
