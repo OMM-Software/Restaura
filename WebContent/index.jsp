@@ -26,15 +26,20 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
-      padding-top: 110px;
+       border-radius: 6px;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      /*padding-bottom: 10px;*/
       background-color: #5c5a5a;
+      margin-top: 125px;
       /* height: 100%; */
      
     }
     
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #2ECCFA;
+      background-color: #0F96BD;
       color: white;
       padding: 15px;
     }
@@ -43,7 +48,7 @@
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
-        padding-top: 110px;
+        padding-top: 10px;
         float: inherit;
         
       }
@@ -51,7 +56,7 @@
     }
     .header{
     height: 90px;
-    background-color: #2ECCFA;
+    background-color: #0F96BD;
     
     }
    /* Image slider */ 
@@ -127,8 +132,23 @@
 .box .space {
     height: 30px;
 }
-</style>  
-  </style>
+</style>
+
+<script type="text/javascript"> 
+ function NameValidation(){
+	 
+	 if (document.getElementById('first_name') == "") {
+			alert("Please Enter Name!!!");
+			document.getElementById('first_name').focus();
+			return false;
+		}
+	
+	 
+	 
+ }
+ 
+</script>
+ 
 </head>
 <body >
 
@@ -198,13 +218,13 @@
     </a>
     </div>-->
   
-        <div class="col-md-4  sidenav col-md-offset-4">
+        <div class="col-md-4 col-xs-6 col-sm-6 col-lg-4 col sidenav col-md-offset-4 col-xs-offset-3 col-sm-offset-3 col-lg-offset-4">
         	<div class="panel panel-default">
         		<div class="panel-heading">
 			    		<h3 class="panel-title">Register With Us</h3>
 			 			</div>
 			 			<div class="panel-body">
-			    		<form role="form">
+			    		<form role="form" onsubmit="return NameValidation();">
 			    			<div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
@@ -219,7 +239,7 @@
 			    			</div>
                             
                             <div class="form-group">
-			    				<input type="text" name="last_name" id="last_name" class="form-control input-sm glowing border" placeholder="Last Name">
+			    				<input type="text" name="last_name" id="last_name" class="form-control input-sm glowing border" placeholder="Last Name" onclick='return NameValidation()'>
 			    			</div>
 
 			    			<div class="form-group">
@@ -231,7 +251,7 @@
 			    			</div>
 
 			    			
-			    			<input type="submit" value="Register" class="btn btn-info btn-block">
+			    			<input type="submit" value="Register" class="btn btn-info btn-block" >
 			    		
 			    		</form>
 			    	</div>
