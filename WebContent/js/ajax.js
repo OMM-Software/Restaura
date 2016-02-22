@@ -34,16 +34,15 @@ $('#submitBtn').click(function(event) {
 			type:'POST',
 			data : {
 			city : $('#city').val(),
-			area : $('#area'),
+			area : $('#area').val(),
 			email : $('#email').val(),
 			contact_no : $('#contact_no').val(),
 			r_name:$('#r_name').val()
 			},
 			
-			dataType: 'text',
+			
 	        success: function( data ) {
-	        	
-	        	alert(data);
+	        
 	          
 		   }
 		});

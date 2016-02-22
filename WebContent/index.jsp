@@ -168,7 +168,8 @@
                                           <input type="checkbox"> Remember me
                                       </label>
                                   </div> -->
-                                  <button type="submit" class="btn btn-primary" id="submitBtn" >Send Request</button>
+                                  <!-- <input type="submit" class="btn btn-primary" id="submitBtn" value="Send Request"> -->
+                                  <button type="submit" class="btn btn-primary" id="submitBtn">Send Request</button>
                               </form>
 
                           </div>
