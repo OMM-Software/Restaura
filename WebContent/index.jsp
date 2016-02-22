@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <link rel="shortcut icon" href="images/logo.png" />
   <title>Restaura</title>
   <meta charset="utf-8">
@@ -13,8 +14,68 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script type="text/javascript" src="resources/search.js"></script>
+  <script type="text/javascript" src="resources/result.js"></script>
   <link rel="stylesheet" href="css/home.css">
   <script src="js/validation.js"></script>
+  <style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+  
+  </style>
+  
+  <script>
+  function myFunction() {
+	    document.getElementById("myDropdown").classList.toggle("show");
+	}
+  
+ // window.onclick = function(event) {
+	//  if (!event.target.matches('.flow')) {
+
+	  //  var dropdowns = document.getElementsByClassName("dropdown-content");
+	   // var i;
+	   // for (i = 0; i < dropdowns.length; i++) {
+	    //  var openDropdown = dropdowns[i];
+	     // if (openDropdown.classList.contains('show')) {
+	     //   openDropdown.classList.remove('show');
+	      //}
+	   // }
+	 // }
+//}
+</script>
+<script>
+//function search(force) {
+ //   var existingString = $("#CityName").val();
+   // if (!force && existingString.length < 3) return; //wasn't enter, not > 2 char
+   // $.get('/Search' + existingString, function(data) {
+     //   $('div#results').html(data);
+       // $('#results').show();
+   // });
+//}
+</script>
+  
 </head>
 <body >
 
@@ -126,16 +187,19 @@
                               <form class="form-inline" role="form">
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputEmail2">Select City</label>
-                                      
-                                      
-                                      <select class="form-control m-bot15">
+                                      <select name="CityName" class="form-control m-bot15" id="CityName">
                                       <option>--Select City--</option>
                                       <option>Pune</option>
                                       </select>
                                   </div>
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputPassword2">Enter Location</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Select Location">
+                                      <input type="text" name="loc" class="flow" id="searchString" placeholder="Select Location" onclick="myFunction()">
+                                      <div id="myDropdown" class="dropdown-content">
+                                       <!--    <a href="#home">Home</a>
+                                          <a href="#about">About</a>
+                                          <a href="#contact">Contact</a>   -->
+                                          </div>
                                   </div>
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputEmail2">Restaurant Name</label>
