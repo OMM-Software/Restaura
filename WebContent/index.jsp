@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
   <link rel="shortcut icon" href="images/logo.png" />
   <title>Restaura</title>
   <meta charset="utf-8">
@@ -14,7 +15,9 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <link rel="stylesheet" href="css/home.css">
-  <script src="js/validation.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"
+	type="text/javascript"></script>
+  <script src="js/ajax.js"></script>
 </head>
 <body >
 
@@ -123,31 +126,41 @@
                               Inline form
                           </header> -->
                           <div class="panel-body" >
-                              <form class="form-inline" role="form">
+                              <form class="form-inline" role="form" action="SendRequest" method="post">
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputEmail2">Select City</label>
                                       
                                       
-                                      <select class="form-control m-bot15">
+                                      <select class="form-control m-bot15" name="city" id="city" required>
                                       <option>--Select City--</option>
                                       <option>Pune</option>
+                                      <option>Mumbai</option>
                                       </select>
                                   </div>
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputPassword2">Enter Location</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Select Location">
+                                      <!-- <input type="text" class="form-control" id="location" placeholder="Select Location" required> -->
+                                     <select class="form-control m-bot15" name="area" id="area">
+                                     <option>--Select Area--</option>
+                                     </select>
+                                      <%-- <select class="form-control m-bot15" name="area" id="area" required>
+                                      <c:forEach items="${areaLocation}" var="areaList">
+                                      <option><c:out value="${areaList.area}"></c:out></option>
+                                      </c:forEach>
+                                      </select> --%>
                                   </div>
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputEmail2">Restaurant Name</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Restaurant Name">
+                                      <input type="text" class="form-control" id="r_name" name="r_name" placeholder="Restaurant Name" required>
+                                       
                                   </div>
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address">
+                                      <input type="email" class="form-control" id="email" name="email" placeholder="Email address">
                                   </div>
                                   <div class="form-group">
                                       <label class="sr-only" for="exampleInputPassword2">Contact No</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contact No">
+                                      <input type="text" class="form-control" id="contact_no" name="contact_no" placeholder="Contact No" required>
                                   </div>
                                   
                                   <!-- <div class="checkbox">
@@ -155,7 +168,7 @@
                                           <input type="checkbox"> Remember me
                                       </label>
                                   </div> -->
-                                  <button type="submit" class="btn btn-primary">Send Request</button>
+                                  <button type="submit" class="btn btn-primary" id="submitBtn" >Send Request</button>
                               </form>
 
                           </div>
